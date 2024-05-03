@@ -1,5 +1,6 @@
-﻿namespace RestaurantAssignment.Source
+﻿namespace RestaurantAssignment.Services
 {
+    // Assumes a fixed set of menu item types: starter, main, and drink.
     public enum MenuItemType
     {
         Starter,
@@ -9,6 +10,7 @@
 
     public class MenuItem
     {
+        // Assumes each menu item has a name and price.
         public MenuItemType Name { get; }
         public decimal Price { get; }
 
