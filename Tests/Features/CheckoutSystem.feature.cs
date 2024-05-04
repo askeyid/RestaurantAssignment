@@ -97,7 +97,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("Order 4 starters, 4 mains and 4 drinks", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 9
- testRunner.Then("The endpoint returns a correctly calculated bill of 54.00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("The endpoint returns a correctly calculated bill of 59.40", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -127,13 +127,13 @@ this.ScenarioInitialize(scenarioInfo);
     testRunner.When("Order 1 starters, 2 mains and 2 drinks before 19:00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 16
-    testRunner.Then("The endpoint returns a correctly calculated bill of 21.50", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("The endpoint returns a correctly calculated bill of 23.65", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 17
  testRunner.When("Order 0 starters, 2 mains and 2 drinks", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 18
-    testRunner.Then("The endpoint returns a correctly calculated bill of 40.50", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("The endpoint returns a correctly calculated bill of 44.55", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -164,13 +164,13 @@ this.ScenarioInitialize(scenarioInfo);
     testRunner.When("Order 4 starters, 4 mains and 4 drinks", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 26
-    testRunner.Then("The endpoint returns a correctly calculated bill of 54.00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("The endpoint returns a correctly calculated bill of 59.40", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 27
     testRunner.When("Cancel 1 starter, 1 main and 1 drink", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 28
-    testRunner.Then("The endpoint returns a correctly calculated bill of 40.50", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("The endpoint returns a correctly calculated bill of 44.55", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

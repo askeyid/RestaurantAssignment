@@ -2,8 +2,8 @@
 {
     public class OrderManager
     {
-        private List<OrderItem> _orderItems;
-        private Menu _menu;
+        private readonly List<OrderItem> _orderItems;
+        private readonly Menu _menu;
 
         public OrderManager()
         {
