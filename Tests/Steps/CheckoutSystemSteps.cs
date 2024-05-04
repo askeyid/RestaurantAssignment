@@ -5,14 +5,12 @@ namespace RestaurantAssignment.Tests.Steps
     [Binding]
     public class CheckoutSystemSteps
     {
-        private OrderManager _orderManager;
-        private CheckoutSystem _checkoutSystem;
+        private readonly CheckoutSystem _checkoutSystem;
         private decimal _totalBill;
 
         public CheckoutSystemSteps()
         {
-            _orderManager = new OrderManager();
-            _checkoutSystem = new CheckoutSystem(_orderManager);
+            _checkoutSystem = new CheckoutSystem(new OrderManager());
         }
 
         [When(@"Order (\d+) starters?, (\d+) mains? and (\d+) drinks? ?(before 19:00|)?")]
@@ -37,7 +35,7 @@ namespace RestaurantAssignment.Tests.Steps
         }
 
         [Then(@"The endpoint returns a correctly calculated bill of (\d+\.\d+)")]
-        public void ThenTheEndpointReturnsACorrectlyCalculatedBill(decimal totalBill)
+        public void ThenEndpointReturnsCorrectlyCalculatedBill(decimal totalBill)
         {
             // Assuming total bill calculation logic is correct
             _totalBill.Should().Be(totalBill);

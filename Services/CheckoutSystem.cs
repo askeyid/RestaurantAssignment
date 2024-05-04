@@ -2,17 +2,23 @@
 {
     public class CheckoutSystem
     {
-        private OrderManager _orderManager;
+        private readonly OrderManager _orderManager;
+        private const decimal _serviceCharge = 0.1m;
 
         public CheckoutSystem(OrderManager orderManager)
         {
             _orderManager = orderManager;
         }
 
-        // Calculating the total bill for the order
+        // Calculating the total bill for the order including service charge
         public decimal CalculateTotalBill()
         {
-            return _orderManager.CalculateTotalBill();
+            decimal totalBill = _orderManager.CalculateTotalBill();
+            decimal serviceCharge = totalBill * _serviceCharge;
+
+            totalBill += serviceCharge;
+
+            return totalBill;
         }
 
         // Adding an item to the order
