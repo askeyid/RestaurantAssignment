@@ -11,7 +11,6 @@
     public class MenuItem
     {
         public MenuItemType Type { get; }
-        // Assumes each menu item has a name and price.
         public MenuItemType Name { get; }
         public decimal Price { get; }
 

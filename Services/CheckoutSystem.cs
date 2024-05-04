@@ -2,25 +2,30 @@
 {
     public class CheckoutSystem
     {
-        private Menu _menu;
         private OrderManager _orderManager;
 
-        public CheckoutSystem(Menu menu, OrderManager orderManager)
+        public CheckoutSystem(OrderManager orderManager)
         {
-            _menu = menu;
             _orderManager = orderManager;
         }
 
-        // Calculating the total bill for the order.
+        // Calculating the total bill for the order
         public decimal CalculateTotalBill()
         {
             return _orderManager.CalculateTotalBill();
         }
 
-        // Adding an item to the order.
-        public void AddItemToOrder(MenuItemType itemType)
+        // Adding an item to the order
+        public void AddItemToOrder(MenuItemType itemType, string orderTime)
         {
-            _orderManager.AddItemToOrder(itemType, _menu);
+            _orderManager.AddItemToOrder(itemType, orderTime);
+        }
+
+        // Removing an item from the order
+        public void RemoveItemFromOrder(MenuItemType menuItemType, string orderTime)
+        {
+
+            _orderManager.RemoveItemFromOrder(menuItemType, orderTime);
         }
     }
 }
